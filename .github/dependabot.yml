@@ -4,8 +4,13 @@
 # https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
 
 version: 2
-updates: Ready for launch.
-  - package-ecosystem: "" # See documentation for possible values
+updates:
+  - package-ecosystem: "npm" # Specify your package ecosystem
     directory: "/" # Location of package manifests
     schedule:
-      interval: "weekly"
+      interval: "weekly" # Define the update interval
+    open-pull-requests-limit: 5 # Optional: Limit the number of open PRs
+    reviewers:
+      - "reviewer1" # Optional: Add reviewers
+    assignees:
+      - "assignee1" # Optional: Add assignees
